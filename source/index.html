@@ -5,9 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Интернет-магазин велосипедов Moon</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+<body class="page-body">
+  <header class="header">
+    <nav class="header__nav nav">
+      <button class="nav__button nav__button--closed" type="button" aria-label="Открыть меню"></button>
+      <ul class="nav__list nav__list--js">
+        <li class="nav__list-item">
+          <a href="#">О нас</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#">Виды велосипедов</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#">Видео про велосипеды</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="promo">
+      <div class="promo-wrapper">
+        <section class="about">
+          <img class="about__logo" src="./img/logo/logo.svg" width="68" height="21" alt="Логотип магазина">
+          <h1>Мы продаем велосипеды</h1>
+          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        </section>
+        <section class="find-product">
+          <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
+          <form class="find-product__form" action="https://echo.htmlacademy.ru" method="POST">
+            <label for="name">
+              <input type="text" id="name" placeholder="Введите Ваше Имя" required>
+            </label>
+            <label for="phone">
+              <input type="tel" id="phone" placeholder="Введите Ваш номер телефона" required>
+            </label>
+            <button type="submit">Подобрать велосипед мечты</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">Footer</footer>
+
+  <script src="./js/script.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,79 @@
+.find-product {
+  width: 328px;
+
+  @media (max-width: $max-tablet-width) {
+    width: 321px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+  }
+}
+
+.find-product h2 {
+  @include text-size(17px, 28px);
+
+  color: $text-color-white;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (max-width: $max-tablet-width) {
+    color: $text-color-black;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    margin-bottom: 29px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.find-product__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.find-product__form input {
+  width: 327px;
+  padding: 20px 29px 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+
+  @media (max-width: $max-tablet-width) {
+    border: 1px solid $input-border-color;
+    width: 321px;
+    // padding: 18px 29px 16px;
+    padding: 16px 12px 16px 20px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    padding-left: 24px;
+  }
+}
+
+.find-product__form input::placeholder {
+  @include text-size(15px, 24px);
+
+  color: $text-color-gray;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.find-product__form button {
+  @include text-size(15px, 21px);
+
+  color: $text-color-black;
+  font-weight: 600;
+  padding: 15px;
+  background-color: $color-accent;
+  border: none;
+  border-radius: 5px;
+}
