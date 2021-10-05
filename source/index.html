@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>Интернет-магазин велосипедов Moon</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body class="page-body">
   <header class="header">
     <nav class="header__nav nav">
@@ -39,20 +41,97 @@
           <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
           <form class="find-product__form" action="https://echo.htmlacademy.ru" method="POST">
             <label for="name">
-              <input type="text" id="name" placeholder="Введите Ваше Имя" required>
+              <input type="text" id="name" placeholder="Введите Ваше Имя">
             </label>
             <label for="phone">
-              <input type="tel" id="phone" placeholder="Введите Ваш номер телефона" required>
+              <input type="tel" id="phone" placeholder="Введите Ваш номер телефона" pattern="[0-9]" required>
             </label>
             <button type="submit">Подобрать велосипед мечты</button>
           </form>
         </section>
       </div>
     </div>
+    <section class="features">
+      <h2>Несколько фактов о нас</h2>
+      <ol class="features__list">
+        <li>Самый широкий выбор велосипедов!</li>
+        <li>Доставка велосипедов по всей России!</li>
+        <li>Большой выбор крутых аксессуаров!</li>
+        <li>Профессиональные консультации!</li>
+      </ol>
+    </section>
+    <section class="products">
+      <div class="products__wrapper">
+        <h2>Виды велосипедов</h2>
+        <ul class="products__list">
+          <li class="products__item products__item--column-1">
+            <h3>Дорожный велосипед</h3>
+            <div class="products__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/road-bicycle-mobile.webp 1x, ./img/content/road-bicycle-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="./img/content/road-bicycle.webp 1x, ./img/content/road-bicycle-mobile@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/content/road-bicycle-mobile.jpg 1x, ./img/content/road-bicycle-mobile@2x.jpg 2x">
+                <img src="./img/content/road-bicycle.jpg" srcset="./img/content/road-bicycle@2x.jpg 2x" width="342" height="503" alt="Фото дорожного велосипеда в городском парке.">
+              </picture>
+            </div>
+          </li>
+          <li class="products__item products__item--column-2">
+            <h3>Горный велосипед</h3>
+            <div class="products__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/mountain-bicycle-mobile.webp 1x, ./img/content/mountain-bicycle-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="./img/content/mountain-bicycle.webp 1x, ./img/content/mountain-bicycle-mobile@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/content/mountain-bicycle-mobile.jpg 1x, ./img/content/mountain-bicycle-mobile@2x.jpg 2x">
+                <img src="./img/content/mountain-bicycle.jpg" srcset="./img/content/mountain-bicycle@2x.jpg 2x" width="342" height="566" alt="Фото горного велосипеда в горах.">
+              </picture>
+            </div>
+          </li>
+          <li class="products__item">
+            <h3>Детский велосипед</h3>
+            <div class="products__image-wrapper products__item--last-element">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/kids-bicycle-mobile.webp 1x, ./img/content/kids-bicycle-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="./img/content/kids-bicycle.webp 1x, ./img/content/kids-bicycle-mobile@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="./img/content/kids-bicycle-mobile.jpg 1x, ./img/content/kids-bicycle-mobile@2x.jpg 2x">
+                <img src="./img/content/kids-bicycle.jpg" srcset="./img/content/kids-bicycle@2x.jpg 2x" width="342" height="513" alt="Фото детского велосипеда на городской улице.">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="video">
+      <div class="video__wrapper">
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+      </div>
+    </section>
   </main>
-  <footer class="footer">Footer</footer>
+  <footer class="footer">
+    <div class="footer__contacts contacts">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      <div class="contacts__map" id="map"></div>
+      <div class="contacts__wrapper">
+        <a class="contacts__link contacts__link--mail" href="">
+          <svg class="contacts__icon contacts__icon--mail" width="26" height="20">
+            <use xlink:href="./img/sprite_auto.svg#icon-mail"></use>
+          </svg>
+          <span>puteshestviemechta@gmail.ru</span>
+        </a>
+        <a class="contacts__link contacts__link--phone" href="tel:749978468446">
+          <svg class="contacts__icon contacts__icon--phone" width="30" height="30">
+            <use xlink:href="./img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          <span>+7 (499) -784-684-46</span>
+        </a>
+      </div>
+    </div>
+  </footer>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=20f93208-eca5-49f5-afd8-f59179ec98f8"></script>
   <script src="./js/script.js"></script>
 
 </body>
+
 </html>

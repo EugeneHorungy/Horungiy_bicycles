@@ -1,0 +1,37 @@
+.video {
+  background-color: $dark-gray-bg-color;
+}
+
+.video__wrapper {
+  padding-top: 96px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 64px;
+  }
+}
+
+.video__wrapper h2 {
+  @include text-size(30px, 30px);
+
+  color: $text-color-white;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-align: center;
+
+  @media (max-width: $max-tablet-width) {
+    font-size: 24px;
+  }
+}
+
+.video__wrapper p {
+  @include text-size(16px, 28px);
+
+  color: $text-color-off-white;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  text-align: center;
+}

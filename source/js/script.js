@@ -12,5 +12,36 @@ navButton.addEventListener('click', () => {
   navButton.classList.toggle("nav__button--closed");
   navButton.classList.toggle("nav__button--opened");
   nav.classList.toggle("nav--menu-open");
-  page.classList.toggle("page--menu-open");
+  page.classList.toggle("page-body--menu-open");
+});
+
+ymaps.ready(function () {
+  new ymaps.Map('map', {
+    center: [59.93873506417266,30.323117499999945],
+    zoom: 17
+}, {
+    searchControlProvider: 'yandex#search'
+})
+  // const myMap = new ymaps.Map('map', {
+  //     center: [59.93873506417266,30.323117499999945],
+  //     zoom: 17
+  // }, {
+  //     searchControlProvider: 'yandex#search'
+  // }),
+
+  // MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+  //     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  // ),
+
+  // myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+  //     hintContent: 'Мишка',
+  // }, {
+  //     iconLayout: 'default#image',
+  //     iconImageHref: 'img/logo/mishka-marker.svg',
+  //     iconImageSize: [67, 100],
+  //     iconImageOffset: [-21, -83]
+  // });
+
+  // myMap.geoObjects
+  //     .add(myPlacemark)
 });

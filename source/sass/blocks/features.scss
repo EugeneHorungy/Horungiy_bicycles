@@ -1,0 +1,94 @@
+.features {
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1266px;
+  margin-bottom: 152px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-right: 106px;
+    padding-left: 106px;
+    margin-bottom: 71px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-right: 14px;
+    padding-left: 14px;
+    margin-bottom: 81px;
+  }
+}
+
+.features h2 {
+  @include text-size(30px, 30px);
+
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: $text-color-dark-gray;
+  text-align: center;
+  margin-bottom: 100px;
+
+  @media (max-width: $max-tablet-width) {
+    @include text-size(24px, 41px);
+
+    margin-bottom: 86px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    @include text-size(24px, 41px);
+
+    margin-bottom: 86px;
+  }
+}
+
+.features__list {
+  @include list-reset();
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 38px;
+  counter-reset: myCounter;
+
+  @media (max-width: $max-tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 93px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 89px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+.features__list li {
+  @include text-size(22px, 34px);
+
+  position: relative;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: $text-color-black;
+  text-align: center;
+  list-style: none;
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+
+.features__list li::before {
+  @include text-size(28px, 38px);
+
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -50px;
+  counter-increment: myCounter;
+  content: counter(myCounter, decimal-leading-zero);
+  font-weight: 700;
+  color: $color-accent;
+  letter-spacing: -1.27273px;
+  display: inline-block;
+}

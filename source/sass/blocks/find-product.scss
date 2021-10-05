@@ -25,7 +25,7 @@
   @media (max-width: $max-tablet-width) {
     color: $text-color-black;
     font-size: 18px;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.05px;
     margin-bottom: 29px;
   }
 
@@ -37,6 +37,7 @@
 .find-product__form {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 
 .find-product__form input {
@@ -44,12 +45,12 @@
   padding: 20px 29px 14px;
   margin-bottom: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
 
   @media (max-width: $max-tablet-width) {
     border: 1px solid $input-border-color;
     width: 321px;
-    // padding: 18px 29px 16px;
+    cursor: pointer;
     padding: 16px 12px 16px 20px;
   }
 
@@ -76,4 +77,14 @@
   background-color: $color-accent;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    display: block;
+  }
 }

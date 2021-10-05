@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: center 0;
   background-repeat: no-repeat;
+  margin-bottom: 154px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/background/promo-bg-desktop@2x.jpg");
@@ -13,6 +14,7 @@
   @media (max-width: $max-tablet-width) {
     background-image: none;
     background-color: $white-background-color;
+    margin-bottom: 68px;
   }
 }
 
@@ -27,7 +29,6 @@
   padding-top: 320px;
   padding-bottom: 219px;
   padding-right: 2px;
-  // min-height: 825px;
 
   @media (max-width: $max-tablet-width) {
     flex-direction: column;
