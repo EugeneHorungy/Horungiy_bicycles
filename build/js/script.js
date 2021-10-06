@@ -1,47 +1,75 @@
 'use strict';
-const navButton = document.querySelector(".nav__button");
-const menu = document.querySelector(".nav__list");
-const nav = document.querySelector(".nav");
-const page = document.querySelector(".page-body");
 
-// navButton.classList.remove("visually-hidden");
-menu.classList.add("nav__list--js");
+const navButton = document.querySelector('.nav__button');
+const menu = document.querySelector('.nav__list');
+const nav = document.querySelector('.nav');
+const page = document.querySelector('.page-body');
+const mainContent = document.querySelector('.main');
+const form = document.querySelector('.find-product__form');
+const userName = form.querySelector('#name');
+const userPhone = form.querySelector('#phone');
 
-navButton.addEventListener('click', () => {
-  menu.classList.toggle("nav__list--js");
-  navButton.classList.toggle("nav__button--closed");
-  navButton.classList.toggle("nav__button--opened");
-  nav.classList.toggle("nav--menu-open");
-  page.classList.toggle("page-body--menu-open");
+let isStorageSupport = true;
+let storageName = '';
+let storagePhone = '';
+
+console.log(userName);
+console.log(userPhone);
+
+navButton.classList.remove('visually-hidden');
+menu.classList.add('nav__list--js');
+mainContent.classList.remove('main--no-js');
+
+navButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  menu.classList.toggle('nav__list--js');
+  navButton.classList.toggle('nav__button--closed');
+  navButton.classList.toggle('nav__button--opened');
+  nav.classList.toggle('nav--menu-open');
+  page.classList.toggle('page-body--menu-open');
 });
 
 ymaps.ready(function () {
   new ymaps.Map('map', {
     center: [59.93873506417266,30.323117499999945],
     zoom: 17
-}, {
+  }, {
     searchControlProvider: 'yandex#search'
-})
-  // const myMap = new ymaps.Map('map', {
-  //     center: [59.93873506417266,30.323117499999945],
-  //     zoom: 17
-  // }, {
-  //     searchControlProvider: 'yandex#search'
-  // }),
+  })
+});
 
-  // MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-  //     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-  // ),
+try {
+  storageName = localStorage.getItem('name');
+  storagePhone = localStorage.getItem('phone');
+} catch (err) {
+  isStorageSupport = false;
+}
 
-  // myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-  //     hintContent: 'Мишка',
-  // }, {
-  //     iconLayout: 'default#image',
-  //     iconImageHref: 'img/logo/mishka-marker.svg',
-  //     iconImageSize: [67, 100],
-  //     iconImageOffset: [-21, -83]
-  // });
+userName.addEventListener("focus", function (evt) {
+  evt.preventDefault();
+  
+  if (storageName || storagePhone) {
+    userName.value = storageName;
+    userPhone.value = storagePhone;
+  }
+});
 
-  // myMap.geoObjects
-  //     .add(myPlacemark)
+userPhone.addEventListener("focus", function (evt) {
+  evt.preventDefault();
+  
+  if (storageName || storagePhone) {
+    userName.value = storageName;
+    userPhone.value = storagePhone;
+  }
+});
+
+form.addEventListener("submit", function (evt) {
+  if (!userName.value || !userPhone.value) {
+    evt.preventDefault();
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("name", userName.value);
+      localStorage.setItem("phone", userPhone.value);
+    }
+  }
 });
