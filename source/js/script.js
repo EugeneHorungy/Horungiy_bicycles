@@ -13,9 +13,6 @@ let isStorageSupport = true;
 let storageName = '';
 let storagePhone = '';
 
-console.log(userName);
-console.log(userPhone);
-
 navButton.classList.remove('visually-hidden');
 menu.classList.add('nav__list--js');
 mainContent.classList.remove('main--no-js');
@@ -30,12 +27,13 @@ navButton.addEventListener('click', (evt) => {
 });
 
 ymaps.ready(function () {
+  //  eslint-disable-next-line
   new ymaps.Map('map', {
-    center: [59.93873506417266,30.323117499999945],
+    center: [59.93873506417266, 30.323117499999945],
     zoom: 17
   }, {
     searchControlProvider: 'yandex#search'
-  })
+  });
 });
 
 try {
@@ -45,31 +43,31 @@ try {
   isStorageSupport = false;
 }
 
-userName.addEventListener("focus", function (evt) {
+userName.addEventListener('focus', function (evt) {
   evt.preventDefault();
-  
+
   if (storageName || storagePhone) {
     userName.value = storageName;
     userPhone.value = storagePhone;
   }
 });
 
-userPhone.addEventListener("focus", function (evt) {
+userPhone.addEventListener('focus', function (evt) {
   evt.preventDefault();
-  
+
   if (storageName || storagePhone) {
     userName.value = storageName;
     userPhone.value = storagePhone;
   }
 });
 
-form.addEventListener("submit", function (evt) {
+form.addEventListener('submit', function (evt) {
   if (!userName.value || !userPhone.value) {
     evt.preventDefault();
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("name", userName.value);
-      localStorage.setItem("phone", userPhone.value);
+      localStorage.setItem('name', userName.value);
+      localStorage.setItem('phone', userPhone.value);
     }
   }
 });
