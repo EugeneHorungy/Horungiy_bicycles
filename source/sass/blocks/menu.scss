@@ -13,12 +13,15 @@
     flex-direction: column;
     justify-content: flex-start;
     background-color: $white-background-color;
+    overflow-y: scroll;
   }
 }
 
 .menu__item {
   @media (max-width: $max-tablet-width) {
+    width: 100vw;
     margin-bottom: 30px;
+    overflow-y: scroll;
   }
 }
 
