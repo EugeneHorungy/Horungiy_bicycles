@@ -79,6 +79,8 @@
                 <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/road-bicycle-mobile.webp 1x, ./img/content/road-bicycle-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="./img/content/road-bicycle.webp 1x, ./img/content/road-bicycle@2x.webp 2x">
                 <source media="(max-width: 1023px)" srcset="./img/content/road-bicycle-mobile.jpg 1x, ./img/content/road-bicycle-mobile@2x.jpg 2x">
+                <!-- desktop 1x: width="342", height="503"; desktop 2x: width="684", height="1006"; -->
+                <!-- mobile 1x: width="270", height="300"; mobile 2x: width="540", height="600"; -->
                 <img src="./img/content/road-bicycle.jpg" srcset="./img/content/road-bicycle@2x.jpg 2x" width="342" height="503" alt="Фото дорожного велосипеда в городском парке.">
               </picture>
             </div>
@@ -90,6 +92,8 @@
                 <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/mountain-bicycle-mobile.webp 1x, ./img/content/mountain-bicycle-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="./img/content/mountain-bicycle.webp 1x, ./img/content/mountain-bicycle@2x.webp 2x">
                 <source media="(max-width: 1023px)" srcset="./img/content/mountain-bicycle-mobile.jpg 1x, ./img/content/mountain-bicycle-mobile@2x.jpg 2x">
+                <!-- desktop 1x: width="342", height="566"; desktop 2x: width="684", height="1132"; -->
+                <!-- mobile 1x: width="270", height="300"; mobile 2x: width="540", height="600"; -->
                 <img src="./img/content/mountain-bicycle.jpg" srcset="./img/content/mountain-bicycle@2x.jpg 2x" width="342" height="566" alt="Фото горного велосипеда в горах.">
               </picture>
             </div>
@@ -101,6 +105,8 @@
                 <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/kids-bicycle-mobile.webp 1x, ./img/content/kids-bicycle-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="./img/content/kids-bicycle.webp 1x, ./img/content/kids-bicycle@2x.webp 2x">
                 <source media="(max-width: 1023px)" srcset="./img/content/kids-bicycle-mobile.jpg 1x, ./img/content/kids-bicycle-mobile@2x.jpg 2x">
+                <!-- desktop 1x: width="342", height="513"; desktop 2x: width="684", height="1026"; -->
+                <!-- mobile 1x: width="270", height="300"; mobile 2x: width="540", height="600"; -->
                 <img src="./img/content/kids-bicycle.jpg" srcset="./img/content/kids-bicycle@2x.jpg 2x" width="342" height="513" alt="Фото детского велосипеда на городской улице.">
               </picture>
             </div>
@@ -120,6 +126,9 @@
             <source type="image/webp" srcset="./img/content/video-desktop.webp 1x, ./img/content/video-desktop@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="./img/content/video-mobile.jpg 1x, ./img/content/video-mobile@2x.jpg 2x">
             <source media="(max-width: 1023px)" srcset="./img/content/video-tablet.jpg 1x, ./img/content/video-tablet@2x.jpg 2x">
+            <!-- desktop 1x: width="929", height="522"; desktop 2x: width="1858", height="1044"; -->
+            <!-- tablet 1x: width="503", height="282"; mobile 2x: width="1006", height="564"; -->
+            <!-- mobile 1x: width="288", height="162"; mobile 2x: width="576", height="324"; -->
             <img src="./img/content/video-desktop.jpg" srcset="./img/content/video-desktop@2x.jpg 2x" width="929" height="522" alt="Видео о наших велосипедах.">
           </picture>
         </div>
@@ -130,7 +139,20 @@
     <div class="footer__contacts contacts" id="contacts">
       <h2>Как нас найти?</h2>
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-      <div class="contacts__map" id="map"></div>
+      <div class="contacts__map-image">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="./img/content/map-mobile.webp 1x, ./img/content/map-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/map-tablet.webp 1x, ./img/content/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/content/map.webp 1x, ./img/content/map@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="./img/content/map-mobile.png 1x, ./img/content/map-mobile@2x.png 2x">
+          <source media="(max-width: 1023px)" srcset="./img/content/map-tablet.png 1x, ./img/content/map-tablet@2x.png 2x">
+          <!-- desktop 1x: width="957", height="530"; desktop 2x: width="1914", height="1060"; -->
+          <!-- tablet 1x: width="698", height="545"; mobile 2x: width="1396", height="1090"; -->
+          <!-- mobile 1x: width="320", height="250"; mobile 2x: width="640", height="500"; -->
+          <img src="./img/content/map.png" srcset="./img/content/map.@2x.png 2x" width="957" height="530" alt="Изображение местоположения магазина.">
+        </picture>
+      </div>
+      <div class="contacts__map contacts__map--no-js" id="map"></div>
       <div class="contacts__wrapper">
         <a class="contacts__link contacts__link--mail" href="mailto:puteshestviemechta@gmail.ru">
           <svg class="contacts__icon contacts__icon--mail" width="26" height="20">
@@ -139,7 +161,7 @@
           <span>puteshestviemechta@gmail.ru</span>
         </a>
         <a class="contacts__link contacts__link--phone" href="tel:749978468446">
-          <svg class="contacts__icon contacts__icon--phone" width="22" height="24">
+          <svg class="contacts__icon contacts__icon--phone" width="30" height="30">
             <use xlink:href="./img/sprite_auto.svg#icon-phone"></use>
           </svg>
           <span>+7 (499) -784-684-46</span>
@@ -149,6 +171,7 @@
   </footer>
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=20f93208-eca5-49f5-afd8-f59179ec98f8"></script>
+  <script src="./js/vendor.js"></script>
   <script src="./js/script.js"></script>
 
 </body>

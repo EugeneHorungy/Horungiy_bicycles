@@ -1,4 +1,18 @@
 .page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: $primary-font;
+  font-style: normal;
+  overflow-x: hidden;
+
+  @media (min-width: $desktop-width-only) {
+    width: calc(100%);
+  }
+
   &--menu-open {
     overflow: hidden;
     height: 100vh;
