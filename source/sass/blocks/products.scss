@@ -59,11 +59,6 @@
 }
 
 .products__item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  z-index: 0;
-
   @media (max-width: $max-tablet-width) {
     width: calc(50% - 25px);
   }
@@ -86,107 +81,5 @@
     @media (max-width: $max-tablet-width) {
       margin-top: 0;
     }
-  }
-}
-
-.products__item h3 {
-  @include text-size(22px, 34px);
-
-  font-weight: 600;
-  color: $text-color-black;
-  letter-spacing: -0.5px;
-  text-align: center;
-  order: 1;
-  margin-top: 15px;
-
-  @media (max-width: $max-tablet-width) {
-    margin-bottom: 50px;
-  }
-
-  @media (max-width: $max-mobile-width) {
-    margin-bottom: 42px;
-  }
-}
-
-.products__image-wrapper {
-  position: relative;
-}
-
-.products__image-wrapper img {
-  width: 100%;
-}
-
-.products__item:nth-of-type(3n - 2) .products__image-wrapper::before {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  bottom: 172px;
-  left: -60px;
-  z-index: -1;
-  background-image: url("../img/decoration/circle180.svg");
-
-  @media (max-width: $max-tablet-width) {
-    width: 127px;
-    height: 127px;
-    left: -36px;
-    bottom: -24px;
-    background-image: url("../img/decoration/circle127.svg");
-  }
-
-  @media (max-width: $max-mobile-width) {
-    left: -25px;
-    bottom: -23px;
-  }
-}
-
-.products__item:nth-of-type(3n - 1) .products__image-wrapper::before {
-  content: "";
-  position: absolute;
-  width: 47px;
-  height: 47px;
-  top: -18px;
-  left: -19px;
-  background-image: url("../img/decoration/square.svg");
-
-  @media (max-width: $max-tablet-width) {
-    display: none;
-  }
-}
-
-.products__item:nth-of-type(3n - 1) .products__image-wrapper::after {
-  content: "";
-  position: absolute;
-  width: 47px;
-  height: 47px;
-  bottom: -18px;
-  right: -23px;
-  background-image: url("../img/decoration/square.svg");
-
-  @media (max-width: $max-tablet-width) {
-    display: none;
-  }
-}
-
-.products__item:nth-of-type(3n) .products__image-wrapper::before {
-  content: "";
-  position: absolute;
-  width: 95px;
-  height: 95px;
-  top: -32px;
-  right: -36px;
-  background-image: url("../img/decoration/circle95.svg");
-
-  @media (max-width: $max-tablet-width) {
-    width: 68px;
-    height: 68px;
-    top: -20px;
-    right: -25px;
-    background-image: url("../img/decoration/circle68.svg");
-  }
-
-  @media (max-width: $max-mobile-width) {
-    top: -20px;
-    right: -14px;
   }
 }

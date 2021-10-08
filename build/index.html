@@ -21,17 +21,17 @@
   <header class="header">
     <nav class="header__nav nav">
       <button class="nav__button nav__button--closed visually-hidden" type="button" aria-label="Открыть меню"></button>
-      <ul class="nav__list">
-        <li class="nav__list-item">
+      <ul class="nav__list menu">
+        <li class="menu__item">
           <a href="#features">О нас</a>
         </li>
-        <li class="nav__list-item">
+        <li class="menu__item">
           <a href="#products">Виды велосипедов</a>
         </li>
-        <li class="nav__list-item">
+        <li class="menu__item">
           <a href="#video">Видео про велосипеды</a>
         </li>
-        <li class="nav__list-item">
+        <li class="menu__item">
           <a href="#contacts">Контакты</a>
         </li>
       </ul>
@@ -48,11 +48,11 @@
         <section class="find-product">
           <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
           <form class="find-product__form" action="https://echo.htmlacademy.ru" method="POST">
-            <label for="name">
-              <input type="text" id="name" placeholder="Введите Ваше Имя">
+            <label>
+              <input type="text" name="user-name" id="name" placeholder="Введите Ваше Имя">
             </label>
-            <label for="phone">
-              <input type="tel" id="phone" placeholder="Введите Ваш номер телефона" required="">
+            <label>
+              <input type="tel" name="user-phone" id="phone" placeholder="Введите Ваш номер телефона" required="">
             </label>
             <button type="submit">Подобрать велосипед мечты</button>
           </form>
@@ -72,9 +72,9 @@
       <div class="products__wrapper">
         <h2>Виды велосипедов</h2>
         <ul class="products__list">
-          <li class="products__item products__item--column-1">
+          <li class="products__item product-card products__item--column-1">
             <h3>Дорожный велосипед</h3>
-            <div class="products__image-wrapper">
+            <div class="product-card__image-wrapper">
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/road-bicycle-mobile.webp 1x, ./img/content/road-bicycle-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="./img/content/road-bicycle.webp 1x, ./img/content/road-bicycle@2x.webp 2x">
@@ -83,9 +83,9 @@
               </picture>
             </div>
           </li>
-          <li class="products__item products__item--column-2">
+          <li class="products__item product-card products__item--column-2">
             <h3>Горный велосипед</h3>
-            <div class="products__image-wrapper">
+            <div class="product-card__image-wrapper">
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/mountain-bicycle-mobile.webp 1x, ./img/content/mountain-bicycle-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="./img/content/mountain-bicycle.webp 1x, ./img/content/mountain-bicycle@2x.webp 2x">
@@ -94,9 +94,9 @@
               </picture>
             </div>
           </li>
-          <li class="products__item">
+          <li class="products__item product-card">
             <h3>Детский велосипед</h3>
-            <div class="products__image-wrapper">
+            <div class="product-card__image-wrapper">
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="./img/content/kids-bicycle-mobile.webp 1x, ./img/content/kids-bicycle-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="./img/content/kids-bicycle.webp 1x, ./img/content/kids-bicycle@2x.webp 2x">
