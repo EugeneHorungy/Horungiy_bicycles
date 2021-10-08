@@ -22,6 +22,7 @@
   display: none;
 
   @media (max-width: $max-tablet-width) {
+    position: relative;
     display: block;
     width: 50px;
     height: 50px;
