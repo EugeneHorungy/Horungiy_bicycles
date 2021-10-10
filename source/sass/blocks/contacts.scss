@@ -69,7 +69,7 @@
 }
 
 .contacts__map {
-  width: calc(100vw - 168px);
+  width: calc(100vw - 170px);
   max-width: 957px;
   height: 530px;
   margin-bottom: 35px;
@@ -82,16 +82,23 @@
     width: calc(100vw - 70px);
     height: 545px;
     margin-bottom: 18px;
+    align-self: flex-start;
   }
 
   @media (max-width: $max-mobile-width) {
-    width: 100vw;
+    width: calc(100vw);
     height: 250px;
     margin-bottom: 31px;
   }
 }
 
+.contacts__map-image picture,
+.contacts__map-image img {
+  display: flex;
+}
+
 .contacts__map-image {
+  display: flex;
   width: calc(100vw - 168px);
   max-width: 957px;
   height: 530px;
