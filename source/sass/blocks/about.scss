@@ -4,7 +4,7 @@
   @media (max-width: $max-tablet-width) {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: calc(100vw + 2px);
     margin-bottom: 70px;
     background-image: url("../../img/background/promo-bg-tablet.jpg");
     background-size: cover;
