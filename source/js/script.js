@@ -31,7 +31,7 @@ const switchMenu = () => {
 };
 
 const scrollToAnchor = (blockId) => {
-  document.querySelector('' + blockId).scrollIntoView({
+  document.querySelector(`${blockId}`).scrollIntoView({
     behavior: 'smooth',
     block: 'start'
   });
