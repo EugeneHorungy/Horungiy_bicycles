@@ -6,26 +6,35 @@
     flex-direction: column;
     width: calc(100vw + 2px);
     margin-bottom: 70px;
-    background-image: url("../../img/background/promo-bg-tablet.jpg");
-    background-size: cover;
-    background-position: center 0;
-    background-repeat: no-repeat;
     background-color: $header-bg-color;
     min-height: 340px;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/background/promo-bg-tablet@2x.jpg");
+    .webp & {
+      background-image: image-set(url("../img/background/promo-bg-tablet.webp") 1x, url("../img/background/promo-bg-tablet@2x.webp") 2x);
+      background-size: cover;
+      background-position: center 0;
+      background-repeat: no-repeat;
+    }
+
+    .no-webp & {
+      background-image: image-set(url("../img/background/promo-bg-tablet.jpg") 1x, url("../img/background/promo-bg-tablet@2x.jpg") 2x);
+      background-size: cover;
+      background-position: center 0;
+      background-repeat: no-repeat;
     }
   }
 
   @media (max-width: $max-mobile-width) {
-    background-image: url("../../img/background/promo-bg-mobile.jpg");
     min-height: 390px;
     padding-right: 16px;
     padding-left: 16px;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/background/promo-bg-mobile@2x.jpg");
+    .webp & {
+      background-image: image-set(url("../img/background/promo-bg-mobile.webp") 1x, url("../img/background/promo-bg-mobile@2x.webp") 2x);
+    }
+
+    .no-webp & {
+      background-image: image-set(url("../img/background/promo-bg-mobile.jpg") 1x, url("../img/background/promo-bg-mobile@2x.jpg") 2x);
     }
   }
 }

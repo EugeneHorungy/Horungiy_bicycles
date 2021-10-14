@@ -30,21 +30,12 @@ const switchMenu = () => {
   page.classList.toggle('page-body--menu-open');
 };
 
-// const scrollToAnchor = (blockId) => {
-//   document.querySelector('' + blockId).scrollIntoView({
-//     behavior: 'smooth',
-//     block: 'start'
-//   });
-// };
-
 const scrollToAnchor = (blockId) => {
   document.querySelector(`${blockId}`).scrollIntoView({
     behavior: 'smooth',
     block: 'start'
   });
 };
-
-// console.log(document.querySelector(`${blockId}`));
 
 navButton.addEventListener('click', (evt) => {
   evt.preventDefault();
@@ -59,12 +50,10 @@ Array.from(menuLinks).forEach((link) => {
     const maxWidthMobileMenu = window.matchMedia('(max-width: 1023px)');
 
     scrollToAnchor(blockId);
-    console.log(blockId);
 
     if (maxWidthMobileMenu.matches) {
       switchMenu();
       scrollToAnchor(blockId);
-      console.log(blockId);
     }
   });
 });

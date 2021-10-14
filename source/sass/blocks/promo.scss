@@ -1,17 +1,30 @@
 .promo {
   background-color: $header-bg-color;
-  background-image: url("../../img/background/promo-bg-desktop.jpg");
-  background-size: cover;
-  background-position: center 0;
-  background-repeat: no-repeat;
   margin-bottom: 154px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/background/promo-bg-desktop@2x.jpg");
+  .webp & {
+    background-image: image-set(url("../img/background/promo-bg-desktop.webp") 1x, url("../img/background/promo-bg-desktop@2x.webp") 2x);
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+
+    @media (max-width: $max-tablet-width) {
+      background-image: none;
+    }
+  }
+
+  .no-webp & {
+    background-image: image-set(url("../img/background/promo-bg-desktop.jpg") 1x, url("../img/background/promo-bg-desktop@2x.jpg") 2x);
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+
+    @media (max-width: $max-tablet-width) {
+      background-image: none;
+    }
   }
 
   @media (max-width: $max-tablet-width) {
-    background-image: none;
     background-color: $white-background-color;
     margin-bottom: 68px;
   }
