@@ -9,8 +9,6 @@ const mainContent = document.querySelector('.main');
 const form = document.querySelector('.find-product__form');
 const userName = form.querySelector('#name');
 const userPhone = form.querySelector('#phone');
-const map = document.querySelector('.contacts__map');
-const mapImage = document.querySelector('.contacts__map-image');
 
 let isStorageSupport = true;
 let storageName = '';
@@ -19,8 +17,6 @@ let storagePhone = '';
 navButton.classList.remove('visually-hidden');
 menu.classList.add('menu--js');
 mainContent.classList.remove('main--no-js');
-map.classList.remove('contacts__map--no-js');
-mapImage.classList.add('contacts__map-image--js');
 
 const switchMenu = () => {
   menu.classList.toggle('menu--js');
