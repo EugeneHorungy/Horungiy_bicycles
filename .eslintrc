@@ -7,9 +7,10 @@ env:
 extends:
   "htmlacademy/es5"
 
-parserOptions: 
+parserOptions:
   ecmaVersion: 12
 
 
 globals:
-  ymaps: readonly
+  ymaps: readonly,
+  IMask: readonly

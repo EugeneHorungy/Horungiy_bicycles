@@ -1,24 +1,35 @@
 .menu {
   @include list-reset();
 
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
   justify-content: space-between;
-  padding: 20px 15px 10px 10px;
+  padding: 15px 15px 5px 10px;
+  box-sizing: border-box;
 
   @media (max-width: $max-tablet-width) {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 0;
-    flex-direction: column;
+    margin-top: 48px;
     justify-content: flex-start;
   }
 }
 
 .menu__item {
+  @media (min-width: $desktop-width-only) {
+    display: flex;
+  }
+
   @media (max-width: $max-tablet-width) {
     width: 100%;
     margin-bottom: 30px;
   }
+}
+
+.menu__item:nth-of-type(4n) {
+  margin-left: auto;
 }
 
 .menu__item a {

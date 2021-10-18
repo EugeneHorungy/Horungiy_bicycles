@@ -45,6 +45,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 38px;
+  row-gap: 70px;
   counter-reset: myCounter;
 
   @media (max-width: $max-tablet-width) {
@@ -84,7 +85,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  top: -50px;
+  top: -53px;
   counter-increment: myCounter;
   content: counter(myCounter, decimal-leading-zero);
   font-weight: 700;

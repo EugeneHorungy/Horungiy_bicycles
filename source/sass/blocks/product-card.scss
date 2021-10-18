@@ -3,6 +3,10 @@
   flex-direction: column;
   position: relative;
   z-index: 0;
+
+  @media (max-width: $max-mobile-width) {
+    align-items: center;
+  }
 }
 
 .product-card h3 {
@@ -26,6 +30,23 @@
 
 .product-card__image-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+.product-card__image-wrapper picture {
+  width: 100%;
+
+  @media (max-width: $max-mobile-width) {
+    max-width: 380px;
+  }
 }
 
 .product-card__image-wrapper img {

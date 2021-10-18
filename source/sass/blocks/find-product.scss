@@ -19,13 +19,14 @@
   font-weight: 600;
   letter-spacing: -0.01em;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin-top: 3px;
+  margin-bottom: 18px;
 
   @media (max-width: $max-tablet-width) {
     color: $text-color-black;
     font-size: 18px;
     letter-spacing: -0.05px;
+    margin-top: 0;
     margin-bottom: 29px;
   }
 
@@ -56,16 +57,17 @@
 
   @media (max-width: $max-mobile-width) {
     width: 100%;
-    padding-left: 24px;
+    padding: 18px 12px 14px 26px;
+    margin-bottom: 19px;
   }
 }
 
 .find-product__form input::placeholder {
-  @include text-size(15px, 24px);
-
+  font-size: 15px;
   color: $text-color-gray;
   font-weight: 400;
   letter-spacing: 0.3px;
+  overflow: visible;
 }
 
 .find-product__form button {
@@ -73,6 +75,7 @@
 
   color: $text-color-black;
   font-weight: 600;
+  letter-spacing: 0.1px;
   padding: 15px;
   background-color: $color-accent;
   border: none;

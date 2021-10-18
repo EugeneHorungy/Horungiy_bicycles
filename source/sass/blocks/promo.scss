@@ -28,6 +28,11 @@
     background-color: $white-background-color;
     margin-bottom: 68px;
   }
+
+  @media (max-width: $max-mobile-width) {
+    background-color: $white-background-color;
+    margin-bottom: 71px;
+  }
 }
 
 .promo-wrapper {
@@ -37,7 +42,7 @@
   padding: 0;
   max-width: 884px;
   padding-top: 320px;
-  padding-bottom: 219px;
+  padding-bottom: 218px;
   padding-right: 2px;
 
   @media (max-width: $max-tablet-width) {

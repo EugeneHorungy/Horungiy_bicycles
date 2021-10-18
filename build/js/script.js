@@ -1,5 +1,9 @@
 'use strict';
 
+// import IMask from 'imask';
+// const imask = require('imask');
+// import IMask from 'imask';
+
 const navButton = document.querySelector('.nav__button');
 const menu = document.querySelector('.menu');
 const menuLinks = menu.querySelectorAll('a');
@@ -89,3 +93,10 @@ form.addEventListener('submit', function (evt) {
     }
   }
 });
+
+const maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+
+IMask(userPhone, maskOptions);
+
