@@ -68,17 +68,15 @@ try {
 userName.addEventListener('focus', function (evt) {
   evt.preventDefault();
 
-  if (storageName || storagePhone) {
+  if (storageName) {
     userName.value = storageName;
-    userPhone.value = storagePhone;
   }
 });
 
 userPhone.addEventListener('focus', function (evt) {
   evt.preventDefault();
 
-  if (storageName || storagePhone) {
-    userName.value = storageName;
+  if (storagePhone) {
     userPhone.value = storagePhone;
   }
 });
